@@ -1,0 +1,71 @@
+[
+  {
+    "id": "app009",
+    "name": "Khan Academy",
+    "developer": "Khan Academy",
+    "thumbnail": "https://i.ibb.co/Wxxs0vy/khan-academy-thumb.jpg",
+    "banner": "https://i.ibb.co/9VTvKK6/khan-academy-banner.jpg",
+    "downloads": 20000000,
+    "category": "Education",
+    "rating": 4.7,
+    "description": "Free online courses, lessons, and practice in math, science, economics, and more.",
+    "features": [
+      "Video lectures",
+      "Practice exercises",
+      "Personalized learning dashboard"
+    ],
+    "reviews": [
+      {
+        "user": "student_rana",
+        "rating": 5,
+        "comment": "Amazing app for self-study. Helped me improve my grades!"
+      }
+    ]
+  },
+  {
+    "id": "app010",
+    "name": "Duolingo",
+    "developer": "Duolingo",
+    "thumbnail": "https://i.ibb.co/tPbV9mM/duolingo-thumb.jpg",
+    "banner": "https://i.ibb.co/rHsCdVj/duolingo-banner.jpg",
+    "downloads": 300000000,
+    "category": "Education",
+    "rating": 4.5,
+    "description": "Learn languages for free with bite-sized lessons and fun exercises.",
+    "features": [
+      "Multiple language courses",
+      "Gamified learning",
+      "Progress tracking"
+    ],
+    "reviews": [
+      {
+        "user": "language_lover",
+        "rating": 4,
+        "comment": "Great for learning new languages casually and consistently."
+      }
+    ]
+  },
+  {
+    "id": "app011",
+    "name": "Coursera",
+    "developer": "Coursera Inc.",
+    "thumbnail": "https://i.ibb.co/2kH5TsV/coursera-thumb.jpg",
+    "banner": "https://i.ibb.co/WBnCbP2/coursera-banner.jpg",
+    "downloads": 50000000,
+    "category": "Education",
+    "rating": 4.6,
+    "description": "Access courses from top universities and companies, and earn certificates.",
+    "features": [
+      "Online courses",
+      "Professional certificates",
+      "Flexible schedules"
+    ],
+    "reviews": [
+      {
+        "user": "online_student",
+        "rating": 5,
+        "comment": "High quality courses, helped me advance my career."
+      }
+    ]
+  }
+]

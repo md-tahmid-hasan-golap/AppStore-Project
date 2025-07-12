@@ -1,0 +1,117 @@
+[
+  {
+    "id": "app001",
+    "name": "Facebook",
+    "developer": "Meta Platforms, Inc.",
+    "thumbnail": "https://i.ibb.co/vvh8rdkR/abf7676b-0134-4590-8ef5-f9f7e744a2d5.jpg",
+    "banner": "https://i.ibb.co/Vxv4ZKq/facebook-banner.jpg",
+    "downloads": 5000000000,
+    "category": "Social",
+    "rating": 4.2,
+    "description": "Connect with friends and the world around you on Facebook. Share updates, photos, and videos, or stay in touch with communities.",
+    "features": [
+      "News feed updates",
+      "Live video streaming",
+      "Group and page management"
+    ],
+    "reviews": [
+      {
+        "user": "rahim_321",
+        "rating": 4,
+        "comment": "Good for keeping in touch, but too many ads nowadays."
+      }
+    ]
+  },
+  {
+    "id": "app002",
+    "name": "WhatsApp",
+    "developer": "Meta Platforms, Inc.",
+    "thumbnail": "https://i.ibb.co/4ZmQCYP9/96d76893-0346-4ca4-87ff-3d6c112fe196.jpg",
+    "banner": "https://i.ibb.co/yXJQ4nx/whatsapp-banner.jpg",
+    "downloads": 5000000000,
+    "category": "Communication",
+    "rating": 4.6,
+    "description": "Simple, secure, and reliable messaging and calling, available on phones all over the world.",
+    "features": [
+      "End-to-end encryption",
+      "Voice and video calls",
+      "Group chats"
+    ],
+    "reviews": [
+      {
+        "user": "sumi_dev",
+        "rating": 5,
+        "comment": "Most reliable messaging app ever. Use it daily!"
+      }
+    ]
+  },
+  {
+    "id": "app003",
+    "name": "Instagram",
+    "developer": "Meta Platforms, Inc.",
+    "thumbnail": "https://i.ibb.co/4nftSTGj/12540d69-2b11-4485-b45f-a77f79d1fced.jpg",
+    "banner": "https://i.ibb.co/svBLxhp/instagram-banner.jpg",
+    "downloads": 1000000000,
+    "category": "Social",
+    "rating": 4.4,
+    "description": "Share your moments with the world. Post photos, reels, and stories and connect with friends and influencers.",
+    "features": [
+      "Reels and Stories",
+      "Photo filters",
+      "Explore trending content"
+    ],
+    "reviews": [
+      {
+        "user": "photo_lover",
+        "rating": 4,
+        "comment": "Love the reels feature, but it drains battery fast."
+      }
+    ]
+  },
+  {
+    "id": "app004",
+    "name": "YouTube",
+    "developer": "Google LLC",
+    "thumbnail": "https://i.ibb.co/qzPxzj0/9856e86a-3801-4dfd-bf21-f253485aabff.jpg",
+    "banner": "https://i.ibb.co/mTfBG7v/youtube-banner.jpg",
+    "downloads": 10000000000,
+    "category": "Entertainment",
+    "rating": 4.5,
+    "description": "Enjoy your favorite videos and discover new content from creators worldwide. Upload, like, comment, and share.",
+    "features": [
+      "Video streaming",
+      "Content subscriptions",
+      "Live streaming"
+    ],
+    "reviews": [
+      {
+        "user": "gamer_moni",
+        "rating": 5,
+        "comment": "Best app for learning and entertainment together!"
+      }
+    ]
+  },
+  {
+    "id": "app005",
+    "name": "TikTok",
+    "developer": "TikTok Pte. Ltd.",
+    "thumbnail": "https://i.ibb.co/TDjGB0h8/df64ddd1-7f8a-4e2a-9ff3-6c24eaf50e73.jpg",
+    "banner": "https://i.ibb.co/KhPQZKn/tiktok-banner.jpg",
+    "downloads": 3000000000,
+    "category": "Entertainment",
+    "rating": 4.3,
+    "description": "Create and watch short videos that are funny, educational, and entertaining. Follow trends and go viral!",
+    "features": [
+      "Short-form video creation",
+      "Viral challenges",
+      "Music and effects"
+    ],
+    "reviews": [
+      {
+        "user": "dance_vibe",
+        "rating": 4,
+        "comment": "Very addictive! Great for creativity but needs limits."
+      }
+    ]
+  }
+]

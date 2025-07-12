@@ -1,0 +1,71 @@
+[
+  {
+    "id": "app006",
+    "name": "Notion",
+    "developer": "Notion Labs, Inc.",
+    "thumbnail": "https://i.ibb.co/x5nvGtb/notion-thumb.jpg",
+    "banner": "https://i.ibb.co/2S3bjT1/notion-banner.jpg",
+    "downloads": 10000000,
+    "category": "Productivity",
+    "rating": 4.6,
+    "description": "All-in-one workspace for notes, tasks, wikis, and databases. Organize your life and work in one place.",
+    "features": [
+      "Customizable pages and blocks",
+      "Team collaboration",
+      "Task and project management"
+    ],
+    "reviews": [
+      {
+        "user": "work_guru",
+        "rating": 5,
+        "comment": "Perfect for organizing everything. I use it for both study and work."
+      }
+    ]
+  },
+  {
+    "id": "app007",
+    "name": "Google Keep",
+    "developer": "Google LLC",
+    "thumbnail": "https://i.ibb.co/5Y8vjVn/keep-thumb.jpg",
+    "banner": "https://i.ibb.co/gwdg8Z1/keep-banner.jpg",
+    "downloads": 100000000,
+    "category": "Productivity",
+    "rating": 4.4,
+    "description": "Quickly capture what's on your mind and get a reminder later at the right place or time.",
+    "features": [
+      "Color-coded notes",
+      "Voice notes and checklists",
+      "Sync with Google account"
+    ],
+    "reviews": [
+      {
+        "user": "note_nazia",
+        "rating": 4,
+        "comment": "Simple and clean interface. Very handy for quick notes."
+      }
+    ]
+  },
+  {
+    "id": "app008",
+    "name": "Microsoft To Do",
+    "developer": "Microsoft Corporation",
+    "thumbnail": "https://i.ibb.co/VHcd0mG/microsoft-todo-thumb.jpg",
+    "banner": "https://i.ibb.co/gVqQPY6/microsoft-todo-banner.jpg",
+    "downloads": 50000000,
+    "category": "Productivity",
+    "rating": 4.5,
+    "description": "Plan your day with task lists, reminders, and smart suggestions from Microsoft To Do.",
+    "features": [
+      "Daily planner and reminders",
+      "Integration with Microsoft 365",
+      "Task sharing and collaboration"
+    ],
+    "reviews": [
+      {
+        "user": "task_master",
+        "rating": 5,
+        "comment": "Best to-do app out there. I love how it syncs across my devices."
+      }
+    ]
+  }
+]

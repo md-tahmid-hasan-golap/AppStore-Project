@@ -1,0 +1,71 @@
+[
+  {
+    "id": "app012",
+    "name": "MyFitnessPal",
+    "developer": "Under Armour",
+    "thumbnail": "https://i.ibb.co/7jRnXcm/myfitnesspal-thumb.jpg",
+    "banner": "https://i.ibb.co/xhFqpjT/myfitnesspal-banner.jpg",
+    "downloads": 100000000,
+    "category": "Health",
+    "rating": 4.5,
+    "description": "Track your diet and exercise to reach your health goals with MyFitnessPal.",
+    "features": [
+      "Calorie counting",
+      "Exercise logging",
+      "Nutrition insights"
+    ],
+    "reviews": [
+      {
+        "user": "health_freak",
+        "rating": 5,
+        "comment": "Helps me stay on track with my fitness journey."
+      }
+    ]
+  },
+  {
+    "id": "app013",
+    "name": "Headspace",
+    "developer": "Headspace Inc.",
+    "thumbnail": "https://i.ibb.co/8cz3W1h/headspace-thumb.jpg",
+    "banner": "https://i.ibb.co/b2qfsh7/headspace-banner.jpg",
+    "downloads": 50000000,
+    "category": "Health",
+    "rating": 4.7,
+    "description": "Meditation and mindfulness made simple with guided sessions for every day.",
+    "features": [
+      "Guided meditation",
+      "Sleep sounds",
+      "Mindfulness exercises"
+    ],
+    "reviews": [
+      {
+        "user": "peace_seeker",
+        "rating": 5,
+        "comment": "Helped me reduce stress and sleep better."
+      }
+    ]
+  },
+  {
+    "id": "app014",
+    "name": "Fitbit",
+    "developer": "Fitbit, Inc.",
+    "thumbnail": "https://i.ibb.co/tBTYbXk/fitbit-thumb.jpg",
+    "banner": "https://i.ibb.co/8NfDyTq/fitbit-banner.jpg",
+    "downloads": 80000000,
+    "category": "Health",
+    "rating": 4.4,
+    "description": "Track your activity, workouts, and sleep patterns with Fitbit.",
+    "features": [
+      "Step tracking",
+      "Heart rate monitoring",
+      "Sleep analysis"
+    ],
+    "reviews": [
+      {
+        "user": "active_runner",
+        "rating": 4,
+        "comment": "Good for tracking daily activities but battery drains fast."
+      }
+    ]
+  }
+]
