@@ -4,10 +4,15 @@ import { useLoaderData, useParams } from "react-router";
 const TrendingAppDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
-  console.log(data, id);
+  const numericId = parseInt(id);
+  const appsStore = data.find((singleApp) => singleApp.numericId === numericId);
+  console.log(appsStore);
+  //
+
+  console.log(data);
   return (
     <div>
-      <h2>Trending details</h2>
+      <h2>{appsStore.name}</h2>
     </div>
   );
 };

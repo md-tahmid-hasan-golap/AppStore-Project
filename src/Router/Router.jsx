@@ -34,8 +34,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/trendinapp-details/:id",
-        element: <TrendingAppDetails></TrendingAppDetails>,
         loader: () => fetch("/TrendingApp.json"),
+        element: <TrendingAppDetails></TrendingAppDetails>,
       },
     ],
   },
