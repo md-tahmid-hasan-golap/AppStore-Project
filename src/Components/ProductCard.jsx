@@ -1,21 +1,17 @@
 import React from "react";
 import { CiStar } from "react-icons/ci";
-import { Link } from "react-router";
 
-const TrandingAppCard = ({ TrandingApps }) => {
-  const { rating, downloads, thumbnail, name, id } = TrandingApps;
+const ProductCard = ({ produtApp }) => {
+  const { name, downloads, rating, thumbnail } = produtApp;
   return (
-    <Link
-      to={`/trendinapp-details/${id}`}
-      className="flex items-center shadow p-4 justify-between rounded-md"
-    >
+    <div className="flex items-center shadow p-4 justify-between rounded-md">
       <div>
         <img className="w-30 rounded-2xl h-30" src={thumbnail} alt="" />
       </div>
+
       <div>
         <h2 className="font-bold">{name}</h2>
         <p>downloads : {downloads}</p>
-
         <p className="flex gap-5 items-center">
           {rating}{" "}
           <span className="text-amber-500 font-bold">
@@ -23,8 +19,8 @@ const TrandingAppCard = ({ TrandingApps }) => {
           </span>
         </p>
       </div>
-    </Link>
+    </div>
   );
 };
 
-export default TrandingAppCard;
+export default ProductCard;

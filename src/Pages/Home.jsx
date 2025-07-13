@@ -3,9 +3,13 @@ import { useLoaderData } from "react-router";
 import Banner from "../Components/Banner";
 import TrandingApps from "../Components/TrandingApps";
 import ProductivityApps from "../Components/ProductivityApps";
+import EducationApps from "../Components/EducationApps";
+import HealthApps from "../Components/HealthApps";
 
 const Home = () => {
-  const data = useLoaderData();
+  const { trendingData, ProductivityData, EducationData, helthData } =
+    useLoaderData();
+
   //   console.log(data);
   return (
     <div>
@@ -13,9 +17,11 @@ const Home = () => {
         <Banner></Banner>
       </section>
 
-      <TrandingApps data={data}></TrandingApps>
+      <TrandingApps data={trendingData}></TrandingApps>
 
-      <ProductivityApps></ProductivityApps>
+      <ProductivityApps ProductivityData={ProductivityData}></ProductivityApps>
+      <EducationApps EducationData={EducationData}></EducationApps>
+      <HealthApps helthData={helthData}></HealthApps>
     </div>
   );
 };
