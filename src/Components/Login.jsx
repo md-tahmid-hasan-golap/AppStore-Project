@@ -1,4 +1,5 @@
 import React from "react";
+import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router";
 
 const Login = () => {
@@ -44,6 +45,10 @@ const Login = () => {
           </Link>
         </p>
       </form>
+      <button className="btn btn-outline btn-secondary">
+        <FcGoogle size={25} />
+        Login With Google
+      </button>
     </div>
   );
 };

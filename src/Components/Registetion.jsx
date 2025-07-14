@@ -1,4 +1,5 @@
 import React from "react";
+import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router";
 
 const Register = () => {
@@ -66,6 +67,10 @@ const Register = () => {
             Login
           </Link>
         </p>
+        <button className="btn btn-outline btn-secondary">
+          <FcGoogle size={25} />
+          Sign Up With Google
+        </button>
       </form>
     </div>
   );
