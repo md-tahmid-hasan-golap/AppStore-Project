@@ -3,7 +3,7 @@ import React from "react";
 const Banner = () => {
   return (
     <div className="carousel w-full rounded-xl shadow-xl mt-10">
-      {/* Slide 1 */}
+      {/* Slide 01 */}
       <div id="slide1" className="carousel-item relative w-full">
         <img
           src="https://i.ibb.co/wZGnscCy/Screenshot-2025-07-13-233041.png"
@@ -28,6 +28,7 @@ const Banner = () => {
           className="w-full object-cover h-[300px]"
           alt="Promotion 2"
         />
+
         <div className="absolute flex items-center justify-between transform -translate-y-1/2 left-4 right-4 top-1/2">
           <a href="#slide1" className="btn btn-circle bg-gray-800 text-white">
             ❮
