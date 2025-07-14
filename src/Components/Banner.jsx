@@ -2,11 +2,11 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="carousel w-full rounded-xl shadow-xl py-8">
+    <div className="carousel w-full rounded-xl shadow-xl mt-10">
       {/* Slide 1 */}
       <div id="slide1" className="carousel-item relative w-full">
         <img
-          src="https://i.ibb.co/1YD77d8Z/Screenshot-2025-07-13-232718.png"
+          src="https://i.ibb.co/wZGnscCy/Screenshot-2025-07-13-233041.png"
           className="w-full object-cover h-[300px]"
           alt="Promotion 1"
         />
@@ -24,7 +24,7 @@ const Banner = () => {
       {/* Slide 2 */}
       <div id="slide2" className="carousel-item relative w-full">
         <img
-          src="https://i.ibb.co/wZGnscCy/Screenshot-2025-07-13-233041.png"
+          src="https://i.ibb.co/1YD77d8Z/Screenshot-2025-07-13-232718.png"
           className="w-full object-cover h-[300px]"
           alt="Promotion 2"
         />
