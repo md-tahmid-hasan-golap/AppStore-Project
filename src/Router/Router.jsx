@@ -7,6 +7,9 @@ import Login from "../Components/Login";
 import Registetion from "../Components/Registetion";
 import Kids from "../Components/Kids";
 import TrendingAppDetails from "../Components/TrendingAppDetails";
+import ProductivityDetails from "../Components/ProductivityDetails";
+import EducationAppDetails from "../Components/EducationAppDetails";
+import HealthAppDEtails from "../Components/HealthAppDEtails";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +39,21 @@ const router = createBrowserRouter([
         path: "/trendinapp-details/:id",
         loader: () => fetch("/TrendingApp.json"),
         element: <TrendingAppDetails></TrendingAppDetails>,
+      },
+      {
+        path: "/productivityAppDetails/:id",
+        loader: () => fetch("/ProductivityApp.json"),
+        element: <ProductivityDetails></ProductivityDetails>,
+      },
+      {
+        path: "/educationAppDetails/:id",
+        loader: () => fetch("/Education.json"),
+        element: <EducationAppDetails></EducationAppDetails>,
+      },
+      {
+        path: "/healthAppDetails/:id",
+        loader: () => fetch("/HealthApp.json"),
+        element: <HealthAppDEtails></HealthAppDEtails>,
       },
     ],
   },

@@ -1,10 +1,14 @@
 import React from "react";
 import { CiStar } from "react-icons/ci";
+import { Link } from "react-router";
 
 const EducationAppCard = ({ educationApp }) => {
-  const { name, downloads, rating, thumbnail } = educationApp;
+  const { name, downloads, rating, thumbnail, id } = educationApp;
   return (
-    <div className="flex items-center shadow p-4 justify-between rounded-md">
+    <Link
+      to={`/educationAppDetails/${id}`}
+      className="flex items-center shadow p-4 justify-between rounded-md"
+    >
       <div>
         <img className="w-30 rounded-2xl h-30" src={thumbnail} alt="" />
       </div>
@@ -19,7 +23,7 @@ const EducationAppCard = ({ educationApp }) => {
           </span>
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

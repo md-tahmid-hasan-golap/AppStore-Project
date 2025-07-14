@@ -3,7 +3,7 @@ import { CiStar } from "react-icons/ci";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { useLoaderData, useParams } from "react-router";
 
-const TrendingAppDetails = () => {
+const EducationAppDetails = () => {
   const [installed, setInstalled] = useState(false);
 
   const handleToggle = () => {
@@ -13,10 +13,7 @@ const TrendingAppDetails = () => {
   const { id } = useParams();
 
   const appsStore = data.find((singleApp) => singleApp.id === id);
-  console.log(appsStore);
-  console.log(data, id);
   const { name, banner, rating, downloads, description } = appsStore;
-
   return (
     <div className="max-w-11/12 mx-auto py-7">
       {/* parent div */}
@@ -76,4 +73,4 @@ const TrendingAppDetails = () => {
   );
 };
 
-export default TrendingAppDetails;
+export default EducationAppDetails;
