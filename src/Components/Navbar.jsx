@@ -1,118 +1,131 @@
 import React, { useContext } from "react";
-import { Link, NavLink } from "react-router";
-
-import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
+import { Link, NavLink } from "react-router-dom"; // ✅ use router-dom
+import { FaGooglePlay } from "react-icons/fa";
 import { AuthContext } from "../firebase/FirebaseAuthProvider";
-import Swal from "sweetalert2"; // ✅ import কর
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, lognOut } = useContext(AuthContext);
+
   const handleLogout = () => {
     lognOut()
       .then(() => {
-        //
         Swal.fire({
-          title: "Good job!",
-          text: "You log out successfully!",
+          title: "Logged Out!",
+          text: "You have been logged out successfully.",
           icon: "success",
-          confirmButtonText: "OK",
+          confirmButtonText: "Okay",
         });
       })
       .catch((error) => {
-        // You log out successfully!
-        console.log(error);
         Swal.fire({
-          title: "Oops...",
+          title: "Oops!",
           text: error.message,
           icon: "error",
         });
       });
   };
+
   const links = (
     <>
-      <li className="text-xl">
+      <li>
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? "text-blue-500" : "")}
+          className={({ isActive }) =>
+            isActive ? "text-blue-600 font-semibold" : ""
+          }
         >
-          Apps{" "}
+          Apps
         </NavLink>
       </li>
-      <li className="text-xl">
+      <li>
         <NavLink
           to="/myprofile"
-          className={({ isActive }) => (isActive ? "text-blue-500" : "")}
+          className={({ isActive }) =>
+            isActive ? "text-blue-600 font-semibold" : ""
+          }
         >
           My Profile
         </NavLink>
       </li>
-      <li className="text-xl">
+      <li>
         <NavLink
           to="/kids"
-          className={({ isActive }) => (isActive ? "text-blue-500" : "")}
+          className={({ isActive }) =>
+            isActive ? "text-blue-600 font-semibold" : ""
+          }
         >
           Kids
         </NavLink>
       </li>
     </>
   );
+
   return (
-    <div className="navbar max-w-11/12 mx-auto">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+    <div className="bg-white shadow-md sticky top-0 z-50">
+      <div className="navbar container mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Left: Logo & Play Store */}
+        <div className="flex items-center gap-4">
+          <button className="btn bg-black text-white hover:bg-gray-900">
+            <FaGooglePlay size={20} />
+            <span className="hidden sm:inline">Google Play</span>
+          </button>
+          <h1 className="text-2xl font-bold text-amber-500">MyAppBD</h1>
+        </div>
+
+        {/* Center: Menu */}
+        <div className="hidden lg:flex">
+          <ul className="menu menu-horizontal gap-6 text-lg font-medium">
+            {links}
+          </ul>
+        </div>
+
+        {/* Right: User & Auth */}
+        <div className="flex items-center gap-4">
+          {user ? (
+            <>
+              <img
+                src={user.photoURL}
+                alt="Profile"
+                className="w-10 h-10 rounded-full border border-gray-300"
+                title={user.displayName}
+              />
+              <button onClick={handleLogout} className="btn btn-warning">
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link to="/auth/login" className="btn btn-neutral">
+              Login
+            </Link>
+          )}
+        </div>
+
+        {/* Mobile Menu */}
+        <div className="lg:hidden dropdown dropdown-end">
+          <label tabIndex={0} className="btn btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              {" "}
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
-          </div>
+          </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow bg-base-100 rounded-box w-52"
           >
             {links}
           </ul>
         </div>
-        <div className="flex items-center gap-2">
-          <button className="btn bg-black text-white border-black ">
-            <FaGooglePlay size={30} /> Google Play Store
-          </button>
-          <h2 className="text-2xl font-semibold text-amber-500">MyAppBD</h2>
-        </div>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
-      </div>
-      <div className="navbar-end">
-        {user ? (
-          <div className="flex items-center gap-4">
-            {/* ✅ Show profile image */}
-            <img
-              src={user.photoURL}
-              alt="Profile"
-              className="w-10 h-10 rounded-full border border-gray-300"
-            />
-
-            <button onClick={handleLogout} className="btn btn-warning">
-              Log Out
-            </button>
-          </div>
-        ) : (
-          <Link to="/auth/login" className="btn btn-neutral px-6">
-            Login
-          </Link>
-        )}
       </div>
     </div>
   );
