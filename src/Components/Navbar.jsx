@@ -3,18 +3,29 @@ import { Link, NavLink } from "react-router";
 
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 import { AuthContext } from "../firebase/FirebaseAuthProvider";
+import Swal from "sweetalert2"; // ✅ import কর
 
 const Navbar = () => {
   const { user, lognOut } = useContext(AuthContext);
   const handleLogout = () => {
     lognOut()
       .then(() => {
-        // Sign-out successful.
-        alert("you logout success");
+        //
+        Swal.fire({
+          title: "Good job!",
+          text: "You log out successfully!",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
       })
       .catch((error) => {
-        // An error happened.
+        // You log out successfully!
         console.log(error);
+        Swal.fire({
+          title: "Oops...",
+          text: error.message,
+          icon: "error",
+        });
       });
   };
   const links = (
@@ -85,9 +96,18 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <button onClick={handleLogout} className="btn btn-warning">
-            Log Out
-          </button>
+          <div className="flex items-center gap-4">
+            {/* ✅ Show profile image */}
+            <img
+              src={user.photoURL}
+              alt="Profile"
+              className="w-10 h-10 rounded-full border border-gray-300"
+            />
+
+            <button onClick={handleLogout} className="btn btn-warning">
+              Log Out
+            </button>
+          </div>
         ) : (
           <Link to="/auth/login" className="btn btn-neutral px-6">
             Login
