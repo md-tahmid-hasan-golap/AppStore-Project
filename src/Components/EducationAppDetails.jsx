@@ -3,7 +3,7 @@ import { CiStar } from "react-icons/ci";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { useLoaderData, useParams } from "react-router";
 
-const EducationAppDetails = () => {
+const HealthAppDEtails = () => {
   const [installed, setInstalled] = useState(false);
 
   const handleToggle = () => {
@@ -73,4 +73,4 @@ const EducationAppDetails = () => {
   );
 };
 
-export default EducationAppDetails;
+export default HealthAppDEtails;
