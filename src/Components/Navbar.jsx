@@ -40,7 +40,7 @@ const Navbar = () => {
       </li>
       <li className="text-xl">
         <NavLink
-          to="/my-profile"
+          to="/myprofile"
           className={({ isActive }) => (isActive ? "text-blue-500" : "")}
         >
           My Profile

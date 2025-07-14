@@ -10,6 +10,7 @@ import TrendingAppDetails from "../Components/TrendingAppDetails";
 import ProductivityDetails from "../Components/ProductivityDetails";
 import EducationAppDetails from "../Components/EducationAppDetails";
 import HealthAppDEtails from "../Components/HealthAppDEtails";
+import MyProfile from "../Components/MyProfile";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         path: "/healthAppDetails/:id",
         loader: () => fetch("/HealthApp.json"),
         element: <HealthAppDEtails></HealthAppDEtails>,
+      },
+      {
+        path: "/myprofile",
+        element: <MyProfile></MyProfile>,
       },
     ],
   },
