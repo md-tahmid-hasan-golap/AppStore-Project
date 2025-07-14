@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router";
+import { AuthContext } from "../firebase/FirebaseAuthProvider";
 
 const Register = () => {
+  const { creatUser } = useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -11,6 +13,18 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(name, photoUrl, email, password);
+    creatUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        // setUser(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage, errorCode);
+        //
+      });
   };
   return (
     <div className="card bg-base-100 w-full max-w-sm mx-auto mt-10 mb-10 shrink-0 shadow-2xl p-6">
