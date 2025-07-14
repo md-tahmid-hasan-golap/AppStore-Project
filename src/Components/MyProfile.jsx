@@ -25,55 +25,57 @@ const MyProfile = () => {
   };
 
   return user ? (
-    <div className="flex justify-center my-10">
-      <div className="card bg-yellow-200 w-full max-w-sm shrink-0 shadow-2xl p-10">
-        <h2 className="font-bold text-4xl pb-5">My Profile</h2>
-
-        {/* Profile Photo */}
-        <img
-          src={photoURL}
-          alt="Profile"
-          className="w-20 h-20 rounded-full border border-gray-300"
-        />
-
-        {/* Static Name */}
-        <h2 className="pt-3">
-          <span className="text-3xl font-bold"> Name : </span>
-          <span className="text-3xl"> {user.displayName}</span>
+    <div className="min-h-screen flex items-center justify-center px-4 bg-gray-100 py-10">
+      <div className="bg-gradient-to-tr from-indigo-900 via-purple-800 to-pink-700 rounded-3xl shadow-xl max-w-md w-full p-10">
+        <h2 className="text-5xl font-extrabold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+          My Profile
         </h2>
 
-        {/* Email */}
-        <p className="pt-2">
-          <span className="font-bold text-xl">Email : </span>
-          <span>{user.email}</span>
+        <div className="flex justify-center mb-6">
+          <img
+            src={photoURL || "https://via.placeholder.com/150?text=No+Image"}
+            alt="Profile"
+            className="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover"
+          />
+        </div>
+
+        <h3 className="text-2xl font-semibold text-white mb-2">
+          Name: <span>{user.displayName || "No display name"}</span>
+        </h3>
+
+        <p className="text-lg text-white mb-8">
+          Email: <span className="font-medium">{user.email}</span>
         </p>
 
-        {/* Editable Display Name */}
-        <div className="pt-6">
-          <label className="font-bold">Display Name:</label>
+        <div className="mb-6">
+          <label className="block text-white font-semibold mb-2">
+            Display Name:
+          </label>
           <input
             type="text"
-            className="input input-bordered w-full mt-2"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            placeholder="Enter your display name"
           />
         </div>
 
-        {/* Editable Photo URL */}
-        <div className="pt-6">
-          <label className="font-bold">Photo URL:</label>
+        <div className="mb-8">
+          <label className="block text-white font-semibold mb-2">
+            Photo URL:
+          </label>
           <input
             type="text"
-            className="input input-bordered w-full mt-2"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
             value={photoURL}
             onChange={(e) => setPhotoURL(e.target.value)}
+            placeholder="Enter photo URL"
           />
         </div>
 
-        {/* Save Button */}
         <button
           onClick={handleSave}
-          className="btn bg-blue-600 text-white hover:bg-blue-700 mt-7"
+          className="w-full py-3 rounded-lg bg-yellow-400 text-indigo-900 font-extrabold hover:bg-yellow-300 transition-shadow shadow-md hover:shadow-xl"
         >
           Save Changes
         </button>
