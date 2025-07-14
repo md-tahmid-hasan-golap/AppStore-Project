@@ -4,7 +4,18 @@ import { Link } from "react-router";
 import { AuthContext } from "../firebase/FirebaseAuthProvider";
 
 const Register = () => {
-  const { creatUser } = useContext(AuthContext);
+  const { creatUser, googleLogin } = useContext(AuthContext);
+  // Google Login
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        const user = result.user;
+        console.log("✅ Google Login Success:", user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -81,7 +92,10 @@ const Register = () => {
             Login
           </Link>
         </p>
-        <button className="btn btn-outline btn-secondary">
+        <button
+          onClick={handleGoogleLogin}
+          className="btn btn-outline btn-secondary"
+        >
           <FcGoogle size={25} />
           Sign Up With Google
         </button>

@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
 
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
+import { AuthContext } from "../firebase/FirebaseAuthProvider";
 
 const Navbar = () => {
+  const { user, lognOut } = useContext(AuthContext);
+  const handleLogout = () => {
+    lognOut()
+      .then(() => {
+        // Sign-out successful.
+        alert("you logout success");
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log(error);
+      });
+  };
   const links = (
     <>
       <li className="text-xl">
@@ -71,9 +84,15 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <Link to="/auth/login" className="btn btn-neutral px-6">
-          Login
-        </Link>
+        {user ? (
+          <button onClick={handleLogout} className="btn btn-warning">
+            Log Out
+          </button>
+        ) : (
+          <Link to="/auth/login" className="btn btn-neutral px-6">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );

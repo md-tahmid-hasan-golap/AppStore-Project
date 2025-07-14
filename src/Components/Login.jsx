@@ -1,31 +1,45 @@
 import React, { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router";
+import { Link } from "react-router-dom"; // ✅ router-dom use korte hobe
 import { AuthContext } from "../firebase/FirebaseAuthProvider";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, googleLogin } = useContext(AuthContext);
+
+  // Email/Password Login
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, password);
+    console.log(email, password); // ✅ correct variable
 
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        console.log("✅ Email Login:", user);
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert(errorCode, errorMessage);
+        alert(error.message);
       });
   };
+
+  // Google Login
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        const user = result.user;
+        console.log("✅ Google Login Success:", user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="card bg-base-100 w-full max-w-sm mx-auto mt-10 mb-10 shrink-0 shadow-2xl p-6">
       <h2 className="text-2xl font-bold text-center">Login your account</h2>
+
       <form onSubmit={handleLogin} className="card-body">
         <fieldset className="fieldset">
           {/* email */}
@@ -37,6 +51,7 @@ const Login = () => {
             placeholder="Email"
             required
           />
+
           {/* password */}
           <label className="label">Password</label>
           <input
@@ -51,14 +66,20 @@ const Login = () => {
             Login
           </button>
         </fieldset>
+
         <p>
-          Dont’t Have An Account ?{" "}
+          Don’t Have An Account?{" "}
           <Link to="/auth/register" className="text-blue-600">
             Register
           </Link>
         </p>
       </form>
-      <button className="btn btn-outline btn-secondary">
+
+      {/* ✅ Google Login Button */}
+      <button
+        onClick={handleGoogleLogin}
+        className="btn btn-outline btn-secondary"
+      >
         <FcGoogle size={25} />
         Login With Google
       </button>
